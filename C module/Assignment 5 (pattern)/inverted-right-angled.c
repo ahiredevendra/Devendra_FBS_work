@@ -1,12 +1,11 @@
 void main()
 {
 	int n = 5;
-	int temp = n;
 	int i,j;
 	
-	for(i=1; i<=n; i++,temp--)
+	for(i=1; i<=n; i++)
 	{
-		for(j=1; j<=temp; j++)
+		for(j=n; j>=i; j--)
 		{
 			printf("* ");
 		}
