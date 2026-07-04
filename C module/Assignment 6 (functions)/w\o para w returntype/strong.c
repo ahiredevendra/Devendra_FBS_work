@@ -1,14 +1,18 @@
-void CheckStrong(int);
+int CheckStrong();
 void main()
 {
-	int no;
-	printf("Enter number : ");
-	scanf("%d",&no);
+	int x = CheckStrong();
 	
-	CheckStrong(no);
+	if(x==1)
+		printf("Number is strong");
+	else
+		printf("Number is not strong");
 }
-void CheckStrong(int n)
+int CheckStrong()
 {
+	int n;
+	printf("Enter number : ");
+	scanf("%d",&n);
 	
 	int temp = n;
 	int sum = 0;
@@ -30,11 +34,7 @@ void CheckStrong(int n)
 	
 	
 	if(sum==temp)
-	{
-		printf("Number is strong");
-	}
+		return 1;
 	else
-	{
-		printf("Number is not strong");
-	}
+		return 0;
 }
