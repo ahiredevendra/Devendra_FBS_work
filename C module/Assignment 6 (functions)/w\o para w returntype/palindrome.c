@@ -1,32 +1,32 @@
-void Palindrome(int);
+int Palindrome();
 void main()
+{
+	int x = Palindrome();
+	
+	if(x==1)
+		printf("Number is Palindrome");
+	else
+		printf("Number is not Palindrome");
+}
+int Palindrome()
 {
 	int n;
 	printf("Enter number : ");
 	scanf("%d",&n);
 	
-	Palindrome(n);
-}
-void Palindrome(int no)
-{
-	
-	int temp = no;
+	int temp = n;
 	int rev = 0;
 	int rem;
 	
-	while(no!=0)
+	while(n!=0)
 	{
-		rem = no%10;
+		rem = n%10;
 		rev = rev*10 + rem;
-		no = no/10;
+		n = n/10;
 	}
 	
 	if(temp==rev)
-	{
-		printf("Number is Palindrome");
-	}
+		return 1;
 	else
-	{
-		printf("Number is not Palindrome");
-	}
+		return 0;
 }
