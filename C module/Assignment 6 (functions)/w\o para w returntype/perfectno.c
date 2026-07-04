@@ -1,14 +1,18 @@
-void CheckPerfect(int);
+int CheckPerfect();
 void main()
 {
-	int no;
-	printf("Enter number : ");
-	scanf("%d",&no);
+	int x = CheckPerfect();
 	
-	CheckPerfect(no);
+	if(x==1)
+		printf("Perfect Number");
+	else
+		printf("Not Perfect Number");
 }
-void CheckPerfect(int n)
+int CheckPerfect()
 {
+	int n;
+	printf("Enter number : ");
+	scanf("%d",&n);
 	
 	int i = 1;
 	int sum = 0;
@@ -23,11 +27,7 @@ void CheckPerfect(int n)
 	}
 	
 	if(sum==n)
-	{
-		printf("Perfect Number");
-	}
+		return 1;
 	else
-	{
-		printf("Not Perfect Number");
-	}
+		return 0;
 }
