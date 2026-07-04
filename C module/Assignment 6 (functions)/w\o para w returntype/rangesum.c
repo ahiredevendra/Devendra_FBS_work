@@ -1,14 +1,14 @@
-void RangeSum(int);
+int RangeSum();
 void main()
 {
-	int no;
-	printf("Enter range number : ");
-	scanf("%d",&no);
-	
-	RangeSum(no);
+	int x = RangeSum();
+	printf("Sum of range = %d",x);
 }
-void RangeSum(int n)
+int RangeSum()
 {
+	int n;
+	printf("Enter range number : ");
+	scanf("%d",&n);
 	
 	int i = 1;
 	int sum = 0;
@@ -18,5 +18,5 @@ void RangeSum(int n)
 		sum = sum+i;
 		i++;
 	}
-	printf("Sum of range = %d",sum);
+	return sum;
 }
