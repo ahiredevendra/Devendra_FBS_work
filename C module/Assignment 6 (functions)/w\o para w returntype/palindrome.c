@@ -1,37 +1,32 @@
-int checkPalindrome();
+void Palindrome(int);
 void main()
 {
+	int n;
+	printf("Enter number : ");
+	scanf("%d",&n);
 	
-	int x = checkPalindrome();
+	Palindrome(n);
+}
+void Palindrome(int no)
+{
 	
-	if(x==1)
+	int temp = no;
+	int rev = 0;
+	int rem;
+	
+	while(no!=0)
+	{
+		rem = no%10;
+		rev = rev*10 + rem;
+		no = no/10;
+	}
+	
+	if(temp==rev)
 	{
 		printf("Number is Palindrome");
 	}
-	else if(x==0)
-	{
-		printf("Number is not Palindrome");
-	}
-}
-int checkPalindrome()
-{
-	int no = 121;
-	int a,b,c,temp;
-	int rev;
-	
-	a = no%10;
-	temp = no/10;
-	b = temp%10;
-	c = temp/10;
-	
-	rev = a*100 + b*10 + c;
-	
-	if(no==rev)
-	{
-		return 1;
-	}
 	else
 	{
-		return 0;
+		printf("Number is not Palindrome");
 	}
 }
