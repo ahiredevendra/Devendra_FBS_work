@@ -1,15 +1,18 @@
-void CheckPrime(int);
+int CheckPrime();
 void main()
 {
-	int no;
-	printf("Enter number : ");
-	scanf("%d",&no);
+	int x = CheckPrime();
 	
-	CheckPrime(no);
+	if(x==0)
+		printf("Number is not prime");
+	else
+		printf("Number is prime");
 }
-void CheckPrime(int n)
+int CheckPrime()
 {
-	
+	int n;
+	printf("Enter number : ");
+	scanf("%d",&n);
 	int i = 2;
 	int flag = 0;
 	
@@ -24,11 +27,7 @@ void CheckPrime(int n)
 	}
 	
 	if(flag==1)
-	{
-		printf("Number is not prime");
-	}
+		return 0;
 	else
-	{
-		printf("Number is prime");
-	}
+		return 1;
 }
