@@ -1,16 +1,20 @@
 #include<stdio.h>
-void Armstrong(int);
+int Armstrong();
 void main()
 {
-	int x;
+	int x = Armstrong();
+	
+	if(x==1)
+		printf("Number is armstrong");
+	else
+		printf("Number is not armstrong");
+}
+int Armstrong()
+{
+	int n;
 	
 	printf("Enter number : ");
-	scanf("%d",&x);
-	
-	Armstrong(x);	
-}
-void Armstrong(int n)
-{
+	scanf("%d",&n);
 	 
 	int rem;
 	int temp = n;
@@ -31,11 +35,7 @@ void Armstrong(int n)
 	}
 	
 	if(n==sum)
-	{
-		printf("Number is armstrong");
-	}
+		return 1;
 	else
-	{
-		printf("Number is not armstrong");
-	}
+		return 0;
 }
