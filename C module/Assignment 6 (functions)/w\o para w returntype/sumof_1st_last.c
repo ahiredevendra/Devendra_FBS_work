@@ -1,14 +1,15 @@
-void Sumof_1st_last(int);
+int Sumof_1st_last();
 void main()
 {
-	int no;
-	printf("Enter number : ");
-	scanf("%d",&no);
+	int x = Sumof_1st_last();
 	
-	Sumof_1st_last(no);
+	printf("Sum of first and last digit is = %d",x);
 }
-void Sumof_1st_last(int n)
+int Sumof_1st_last()
 {
+	int n;
+	printf("Enter number : ");
+	scanf("%d",&n);
 	
 	int firstdigit = 0;
 	int sum, lastdigit;
@@ -24,5 +25,5 @@ void Sumof_1st_last(int n)
 	
 	sum = firstdigit + lastdigit;
 	
-	printf("Sum of first and last digit is = %d",sum);
+	return sum;
 }
