@@ -1,22 +1,24 @@
-void CountFact(int);
+int CountFact();
 void main()
+{
+	int x = CountFact();
+	
+	printf("Factorial is : %d",x);
+}
+int CountFact()
 {
 	int n;
 	printf("Enter number : ");
 	scanf("%d",&n);
 	
-	CountFact(n);
-}
-void CountFact(int no)
-{
-	
 	int i = 1;
 	int fact = 1;
 	
-	while(no>=i)
+	while(n>=i)
 	{
 		fact = fact*i;
 		i++;
 	}
-	printf("Factorial is : %d",fact);
+	
+	return fact;
 }
