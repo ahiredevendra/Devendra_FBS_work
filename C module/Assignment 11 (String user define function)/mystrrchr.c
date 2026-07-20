@@ -4,7 +4,7 @@ void main()
 {
 	char str[] = "firstbit";
 	
-	char* x = mystrrchr(str,'t');
+	char* x = mystrrchr(str,'i');
 	if(x!=NULL)
 		printf("Character found at %d index",x-str);
 	else
@@ -12,17 +12,16 @@ void main()
 }
 char* mystrrchr(char* str, char ch)
 {
-	int i=0;
-	int flag = 0;
-	while(str[i]!='\0')
+	int x = strlen(str);
+	int i= x-1;
+	while(i>=0)
 	{
 		if(str[i]==ch)
 		{
 			return &str[i];
-			flag = 1;
 		}
-		i++;
+		i--;
 	}
-	if(flag!=0)
-		return NULL;
+	
+	return NULL;
 }
