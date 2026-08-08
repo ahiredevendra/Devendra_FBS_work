@@ -1,0 +1,158 @@
+Name :- Devendra Sanjay Ahire
+Roll No :- 12J0526/015 
+Set B
+
+Question 1 : Write a program to count number of words in a string. 
+
+int mystrlen(char*)
+void main()
+{
+	char str[20] = "devendra";
+
+	int x = mystrlen(str);
+	printf("Length of string is : %d",x);
+}
+int mystrlen(char* str)
+{
+	int count;
+	
+	int i = 0;
+
+	while(str[i]!='\0')
+	{
+		count++;
+		i++;
+	}
+
+	return count;
+}
+
+
+Question 2 : Write a program to print following series: 
+1 + 11+ 111+ 1111+ ….. + n times 1 
+
+
+void main()
+{
+	int i;
+	int num=0;
+
+	int n;
+
+	printf("Enter how many times you have to print");
+	scanf("%d",&n);
+
+	for(i=1; i<=n; i++)
+	{
+		num = num*10 + 1;
+		printf("%d ",num);
+	}
+}
+
+
+Question 3 : Develop a program to manage a music library. Define a structure to 
+store song details (song ID, title, artist, and duration). Create a menu
+driven program to add new songs and display the song library. Use 
+functions to handle these operations. 
+
+typedef struct library
+{
+	int songId;
+	char title[20];
+	char artist[20];
+	int duration;
+	
+}library;
+
+void AddSong(library, int*);
+void DisplaySong(library, int);
+
+void main()
+{
+	library songs[5];
+
+	int choice,i=0;
+
+	printf("Enter 1 to add song");
+	printf("Enter 2 to display song");
+	printf("Enter 3 to exit");
+	
+	scanf("%d",&choice);
+
+	while(1)
+	{
+		switch(choice)
+		{
+			case 1 :
+				AddSong(songs[],&i);
+				break;
+			case 2 :
+				DisplaySong(songs[],i);
+				break;
+			case 3 : 
+				break;
+			default : 
+				printf("Invalid choice");
+			
+		}
+	}
+
+}
+
+void AddSong(library song[], int* i)
+{	
+	
+	
+
+	printf("Enter song id : ");
+	scanf("%d",&song[*i].songId);
+
+	printf("Enter title of song : ");
+	scanf("%s",song[*i].title);
+
+	printf("Enter artist of song : ");
+	scanf("%s",song[*i].artist);	
+
+	printf("Enter song duration : ");
+	scanf("%d",&song[*i].duration);
+	
+	(*i)++;
+
+	
+}
+
+void DisplaySong(library song[], int i)
+{
+	for(int j=1; j<=i; j++)
+	{
+
+	printf("Song id is : %d",song[i].songId);
+
+	printf("Title of song is : %s",song[i].title);
+
+	printf("Artist of song is : %s",song[i].artist);
+
+	printf("Song duration is : %d",song[i].duration);
+
+	}
+	printf("\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
