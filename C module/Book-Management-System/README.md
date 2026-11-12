@@ -49,6 +49,17 @@ The system provides the following functionalities:
 - Sort books according to their ratings.
 - Display the three highest-rated books.
 
+- ## 📸 Project Screenshots
+
+### Main Menu
+Main Menu - screenshots/main-menu.png
+
+### Display All Books
+Display Books - screenshots/display-books.png
+
+### Search Book
+Search Book - screenshots/search-book.png
+
 ## 🛠️ Technologies & Concepts Used
 
 - **Programming Language:** C
