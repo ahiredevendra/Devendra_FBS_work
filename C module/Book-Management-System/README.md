@@ -71,26 +71,6 @@ The system provides the following functionalities:
 5. Sorting functions identify the top three books by price and rating.
 6. The program continues running until the user selects Exit.
 
-## 💻 Sample Menu
-
-==============================
-     BOOK MANAGEMENT SYSTEM
-==============================
-1. Add Book
-2. Remove Book
-3. Search Book by ID
-4. Search Book by Name
-5. Show Books by Author
-6. Show Books by Category
-7. Update Book
-8. Display All Books
-9. Top 3 Books by Price
-10. Top 3 Books by Rating
-11. Exit
-
-Enter Choice:
-
-
 ## 🔮 Future Enhancements
 
 - Implement file handling for permanent data storage.
